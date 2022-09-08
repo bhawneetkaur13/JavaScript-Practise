@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Conversion</title>
+</head>
+<body>
+    <!-- Type conversion is used to convert one type of data to another -->
+    <script>
+        let age = window.prompt("Enter your age")
+        console.log(age);
+        age = Number(age);   //converting string to number
+        age += 1;
+        console.log("Your age after 1 year is", age);
+        // to check the data type of a variable
+        console.log(typeof age);
+        x= String(3.12)  //converting number to string
+        console.log(x, typeof x)
+        y = Boolean(" ")   //converting empty string to boolean
+        console.log(y, typeof y)
+        z= Boolean("Pizza")  //converting string to boolean
+        console.log(z, typeof z)
+
+    </script>
+    
+</body>
+</html>
