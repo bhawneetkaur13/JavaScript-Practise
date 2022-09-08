@@ -24,3 +24,9 @@ console.log(status1);
 document.getElementById("p1").innerHTML = "Hello " + firstName;  //during string concatenation take care of spacing
 document.getElementById("p2").innerHTML = "My age is " + age;
 document.getElementById("p3").innerHTML = "Enrolled: " + status1;
+
+// const - is a variable that cannot be changed
+const PI = 3.14  //keeping the name in capitals is not necessary but it is a good practise
+let radius = 5
+circumference = 2* PI *radius
+console.log(circumference)
