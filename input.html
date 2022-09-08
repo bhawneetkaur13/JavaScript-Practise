@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input</title>
+</head>
+<body>
+    <!-- Two ways to get input from the user -->
+    <label for="name" id="label">Enter Your Name</label>
+    <input type="text" id="text">
+    <button id="button">Submit</button>
+    <script>
+        //  1. Using WINDOW PROMPT 
+        let username =window.prompt("Enter your name:");
+        console.log(username)
+        // 2. Using HTML TEXTBOX
+        
+        document.getElementById("button").onclick=function(){
+            let name = document.getElementById("text").value;
+            console.log(name)
+            document.getElementById("label").innerHTML = "Hello " +name
+        }
+
+        
+
+    </script>
+</body>
+</html>
