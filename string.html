@@ -9,19 +9,21 @@
 <body>
     <script>
         let fullName = "Bhawneet Kaur"
-        console.log(fullName.length);
-        console.log(fullName.charAt(2))
-        console.log(fullName.indexOf("B"))
-        console.log(fullName.lastIndexOf("e"))
-        let trim = "                hii        "
+        console.log(fullName.length);         //gives the length of characters
+        console.log(fullName.charAt(2))       //gives the character at a given index
+        console.log(fullName.indexOf("B"))    //gives the index of first occurence of a given character
+        console.log(fullName.lastIndexOf("e"))       //gives the index of last occurence of a given charac
+        let trim = "                hii        "        //trims all the spaces before and after characters
         console.log(trim.trim())
-        console.log(fullName.toUpperCase())
+        console.log(fullName.toUpperCase())              //gives all the characters in upper case
         console.log(fullName.toLowerCase())
-        console.log(fullName.replace(" ","-"))
+        console.log(fullName.replace(" ","-"))           //replaces a given character with another charac
+
+        // slice() extracts a portion of a string and returns it as a new string without modifying the original string
         let firstName;
         let lastName;
-        firstName= fullName.slice(0,8)
-        lastName= fullName.slice(9)
+        firstName= fullName.slice(0,8)            //slice(firstindex, last index)
+        lastName= fullName.slice(9)               //if no last index is given then it assumes all the   characters after the first index
         console.log(firstName)
         console.log(lastName)
         let Name = "Harleen Matharoo"
