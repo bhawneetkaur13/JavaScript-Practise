@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <script>
+        let fullName = "Bhawneet Kaur"
+        console.log(fullName.length);
+        console.log(fullName.charAt(2))
+        console.log(fullName.indexOf("B"))
+        console.log(fullName.lastIndexOf("e"))
+        let trim = "                hii        "
+        console.log(trim.trim())
+        console.log(fullName.toUpperCase())
+        console.log(fullName.toLowerCase())
+        console.log(fullName.replace(" ","-"))
+        let firstName;
+        let lastName;
+        firstName= fullName.slice(0,8)
+        lastName= fullName.slice(9)
+        console.log(firstName)
+        console.log(lastName)
+        let Name = "Harleen Matharoo"
+        let fname;
+        let lname;
+        fName= Name.slice(0,Name.indexOf(" "))
+        console.log(fName)
+        lName = Name.slice(Name.indexOf(" ")+1)
+        console.log(lName)
+
+    </script>
+</body>
+</html>
