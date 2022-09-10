@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement</title>
+</head>
+<body>
+    <script>
+        // switch is a statement that examines a value for a match against many case clauses.
+        // when there are too many if else statements then we can use switch instead
+        // more efficient than if else
+
+        let grade = "A";
+        switch (grade) {
+            case "A":
+                console.log("You scored A grade")
+                break;
+            case "B":
+                console.log("You scored B grade")
+                break;
+            case "C":
+                console.log("You scored C grade")
+                break;
+            case "D":
+                console.log("You scored D grade")
+                break;
+            case "F":
+                console.log("You failed!")
+                break;
+        
+            default:
+                console.log(grade, "is not a valid grade")
+                break;
+        }
+
+        // Another way to write switch statement
+        let marks = 95
+        switch(true){
+            case marks>=90:
+                console.log("You scored A grade")
+            // and so on you can write as many cases as you want
+        }
+    </script>
+</body>
+</html>
