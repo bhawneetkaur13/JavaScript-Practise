@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operators</title>
+</head>
+<body>
+    <script>
+        // logical operators gives the ability to check more than one condition concurrently
+        // AND -(&&) both the given conditions should be true
+        // OR - (||) either one of the given conditions should be true
+        // NOT- (!)  typically used to reverse a condition. true-> false and false->true
+        
+        let temp = 15;
+        if(temp>=0 && temp<=30){
+            console.log("the weather is good!")
+        }
+        else{
+            console.log("the weather is bad!")
+        }
+        
+        if(temp<=0 || temp>=30){
+            console.log("the weather is bad!")
+        }
+        else{
+            console.log("the weather is good!")
+        }
+
+        if(!(temp>=30)){
+            console.log("the weather is good!")
+        }
+        else if(!(temp<=0)){
+            console.log("the weather is bad!")
+        }
+    </script>
+</body>
+</html>
