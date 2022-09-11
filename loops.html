@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <script>
+        // While loops -it is like an if statement except it repeats itself untill the given condition is true. can be potentially infinite
+        let name = "";
+        while(name=="" || name==null){
+            name= window.prompt("Enter your name")
+        }
+
+        console.log("Hello",name)
+
+        // Do loop- Do something and then check the condition (executes the code atleast once)
+        i=13
+        do{
+            console.log(i)
+        } while(i>=14)
+
+        // for loop -repeats the code a certain amount of time
+        // syntax- for(declaring and assigning a variable; condition; increement/decreement)
+        for(let j =1 ; j<=10; j++){
+            console.log(j)
+        }
+    </script>
+</body>
+</html>
