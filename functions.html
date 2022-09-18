@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        // function- define the code once and use it many times. to perform the code we have to call the function
+        function happybirthday(){        //declaring a function
+            console.log("Happy birthday to you")
+            console.log("Happy birthday to you")
+            console.log("happy birthday dear", userName)
+            console.log("You are" ,age, "years old") 
+               }
+            //Global variable- variable declared outside any function or outside curly brackets
+            // functions can access global variables
+            let userName = window.prompt("Enter your name")
+            let age = window.prompt("Enter your age")
+
+            happybirthday()    //calling a function
+
+        function start(){
+            let name = "bhaw"          //local variables - can be accessed by this function only
+            console.log("Hello", name, "Good morning")
+            // if we want to access a function from within a function we can send some arguments so that it can recogonize the local variable
+
+            hello(name)
+        }
+        start()
+            
+
+        function hello(name){
+            console.log("Hi", name)
+        }
+        
+    </script>
+</body>
+</html>
