@@ -7,6 +7,7 @@
     <title>Loops</title>
 </head>
 <body>
+    <label id="rect"></label>
     <script>
         // While loops -it is like an if statement except it repeats itself untill the given condition is true. can be potentially infinite
         let name = "";
@@ -26,6 +27,22 @@
         // syntax- for(declaring and assigning a variable; condition; increement/decreement)
         for(let j =1 ; j<=10; j++){
             console.log(j)
+        }
+
+        // Nested Loops
+        for(let i =1; i<=2;i++){
+            for(let j =0; j<=3; j++){
+                console.log(j)
+            }
+        }
+        let symbol = window.prompt("Enter a symbol")
+        let rows = window.prompt("Enter number of rows")
+        let columns = window.prompt("Enter number of columns")
+        for(k = 1; k<=rows; k+=1){
+            for(l =1; l<=columns; l+=1){
+                document.getElementById("rect").innerHTML += symbol
+            }
+            document.getElementById("rect").innerHTML += "<br>"
         }
     </script>
 </body>
