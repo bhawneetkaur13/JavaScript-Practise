@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literals</title>
+</head>
+<body>
+    <script>
+        // Template literals- used instead of single or double quotes
+        let user = "bhawneet"
+        let age = 21
+        console.log(`Hello ${user}. You are ${age} years old!`)
+
+        // Format Currency- returns a string with a language sensitive information of number
+        myNum = 123637.67
+        myNum = myNum.toLocaleString("en-US",{style:"currency",currency:"USD"})
+        // myNum = myNum.toLocaleString("hi-IN",{style:"currency",currency:"INR"})
+        // myNum = myNum.toLocaleString("de-DE",{style:"currency",currency:"EUR"})
+        console.log(myNum)
+
+        // format number to percent
+        num = 1
+        num = num.toLocaleString(undefined,{style:"percent"})
+        console.log(num)
+        // num = num.toLocaleString(undefined, {style:"unit", unit:"celcius"})
+    </script>
+</body>
+</html>
