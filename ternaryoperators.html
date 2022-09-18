@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary Operators</title>
+</head>
+<body>
+    <script>
+        // Ternary operators- shortcut for if else statements
+        // takes three operands
+        // 1. condition ?
+        // 2. expression if true
+        // 3. expression if false
+        // condition ? exprIfTrue : exprIfFalse
+
+        let adult = checkAge(12)
+        console.log(adult)
+        function checkAge(age){
+            return age>=18 ? true : false
+        }
+        
+        
+        
+        function checkWinner(win){
+            win ? console.log("win") : console.log("lose")
+        }
+        checkWinner(true)
+       
+        
+    </script>
+</body>
+</html>
