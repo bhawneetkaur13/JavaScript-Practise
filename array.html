@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+        // Array- is like a variable that can store multiple values
+        let fruits = ["apple","banana","orange"]     //each of the item inside an array is called an element
+        console.log(fruits)
+        console.log(fruits[0])  //to access the element at 0 index
+        fruits[0] = "kiwi"      //to update or change an element inside an array
+        console.log(fruits)  
+        fruits.push("coconut")  //to add an element inside an array
+        console.log(fruits)
+        console.log(fruits.indexOf("kiwi"))   //to access index of an element
+        fruits.pop()            //removes the last element from an array
+        console.log(fruits)
+        fruits.unshift("litchi")   //adds an element at the 0 index
+        console.log(fruits)
+        fruits.shift()             //removes the element at 0 index
+        console.log(fruits)
+        console.log(fruits.length)    //gives the length of an array
+
+        // Loop Through An Array
+        // Two ways to iterate over an array
+        // 1. Standard for loop statement
+        let prices = [5,12,43,23]
+        for(let i= 0; i<prices.length; i+=1){
+            console.log(prices[i])
+        }
+        // to print it in reverse order
+        for(i=prices.length -1 ; i>=0; i-=1){
+            console.log(prices[i])
+        }
+
+        // 2.For up statement
+        for(let price of prices){
+            console.log(price)
+        }
+
+        // Sort An Array Of Strings
+        fruits.sort()
+        console.log(fruits)
+        // to sort in reverse order
+        
+    </script>
+</body>
+</html>
