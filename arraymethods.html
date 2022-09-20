@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods In Arrays</title>
+</head>
+<body>
+    <script>
+        // array.forEach()-executes a provided call back for each elements in an array
+        // there are three arguments provided that we have access to. not necessary to use all the three arguments
+        let students = ["harleen","bhawneet","upneet"]
+        students.forEach(capitalize)
+        students.forEach(prints)
+        function capitalize(elements,index,array){
+            array[index]=elements[0].toUpperCase() + elements.substring(1)
+
+        }
+        console.log(...students)
+        function prints(elements){
+            console.log(elements)
+        }
+
+        // Map method-executes a callback function for each element in an array and gives a new array
+        let numbers = [1,2,3,4,5]
+        function square(elements){
+            return Math.pow(elements,2)
+        }
+        let squares = numbers.map(square)
+        console.log(...squares)
+        squares.forEach(prints)
+        function prints(elements){
+            console.log(elements)
+        }
+        function cube(elements){
+            return Math.pow(elements,3)
+        }
+        let cubes = numbers.map(cube)
+        console.log(cubes)
+        cubes.forEach(prints)
+
+        // Filter Method- creates a new array with all the elements that pass the test given by a function
+        let age = [18,23,12,11,45]
+        
+        let adult = age.filter(checkAge)
+        
+        adult.forEach(prints)
+
+        function checkAge(elementss){
+            return elementss>=18
+        }
+
+        // Reduce Method- reduces an array to a single value
+        let nos = [5,10,15,20,25]
+        let totalbill = nos.reduce(bill)
+        console.log(`The total bill is $${totalbill}`)
+        function bill(total,elements){
+            return total+=elements
+        }
+        
+
+        </script>
+</body>
+</html>
