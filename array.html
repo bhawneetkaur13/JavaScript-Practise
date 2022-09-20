@@ -46,6 +46,22 @@
         fruits.sort()
         console.log(fruits)
         // to sort in reverse order
+
+        // Sort An Array Of Numbers
+        let nos = [23,45,12,1,5,26]
+        // sort in ascending order
+        let ascending = nos.sort(ascendingOrder)
+        console.log(...ascending)
+        function ascendingOrder(x,y){
+            return x-y
+        }
+
+        // sort in descending order
+        let descending = nos.sort(descendingOrder)
+        console.log(...descending)
+        function descendingOrder(x,y){
+            return y-x
+        }
         
     </script>
 </body>
