@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Functions</title>
+</head>
+<body>
+    <script>
+        // Nested function - is a function inside a function. outer function has access to inner function. Inner function are hidden from outside the outer function. Increases data security. used in closures
+        let userName = "bhawneet"
+        let userInbox = 0;
+        login();
+        function login(){
+            displayName()
+            displayInbox()
+            function displayName(){
+                console.log(`Welcome ${userName}`)
+            }
+
+            function displayInbox(){
+                console.log(`You have ${userInbox} messages`)
+            }
+
+        }
+    </script>
+</body>
+</html>
