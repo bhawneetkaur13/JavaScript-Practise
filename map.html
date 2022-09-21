@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <script>
+        // Map - holds the key value pair for any data type
+        const store = new Map([
+            ["t-shirt", 100],
+            ["facewash", 50],
+            ["moisturiser",150]
+        ])
+        // to iterate the items
+        store.forEach((value,key) => console.log(`${key} $${value}`))
+        console.log(store)
+
+        // to get one item
+        let shoppingCart =0
+
+        shoppingCart+= store.get("t-shirt")
+        console.log(shoppingCart)
+
+        // to add one pair
+        store.set("hat", 65)
+        store.forEach((value,key) => console.log(`${key} $${value}`))
+
+        // to delete one pair
+        store.delete("hat")
+        store.forEach((value,key) => console.log(`${key} $${value}`))
+
+        // to check if the store has an item or not
+        // true if it has the item
+        // false if it does not have the item
+        console.log(store.has("hat"))
+        console.log(store.has("facewash"))
+
+        // to check the total number of items in the store
+        console.log(store.size)
+    </script>
+</body>
+</html>
