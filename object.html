@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        // objects- an object is a group of properties and methods
+        // prop- what an object has ex. name, colour
+        // methods- what an object can do ex. drive,brake
+        const car={
+            // properties
+            model:"Mustang",
+            colour:"red",
+            year:2023,
+
+            // methods
+            drive : function(){
+                console.log("you are driving")
+            },
+
+            brake : function(){
+                console.log("you stopped the car")
+            }
+
+
+        }
+        car.drive()  //how to invoke a method
+        console.log(car.model)  //how to print a property
+        car.brake()
+
+        // this -reference to a particular object. the object depends on the immediate context
+        const car1= {
+            model : "breeza",
+            colour :"black",
+            year:2024,
+
+            drive : function(){
+                console.log(`you are driving a ${this.model}`)  //when within an object a method wants to access a property
+            },
+
+            brake : function(){
+                console.log("you stopped the car")
+            }
+
+        }
+
+        car1.drive()
+    </script>
+</body>
+</html>
