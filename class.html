@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+</head>
+<body>
+    <script>
+        // class- a blueprint for creating an object. within the class we define what properties and methods each object created from this class should have
+        // use constructors for unique properties
+        class Player{
+            score = 0;
+            play(){                 //inside the class we do not need to write the function keyword
+                console.log("you started the game")
+            } 
+            exit(){
+                console.log("you left the game")
+            }           
+        }
+        const Player1 = new Player()      //we can create as many objects as we want
+        Player1.play()
+        Player1.score += 5
+        console.log(Player1.score)
+    </script>
+</body>
+</html>
