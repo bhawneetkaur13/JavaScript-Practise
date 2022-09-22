@@ -23,6 +23,40 @@
         Player1.play()
         Player1.score += 5
         console.log(Player1.score)
+
+        // constructor - special method of a class. accepts arguments and assign properties
+        class Student{
+            constructor(name,age,gpa){
+                this.name = name;
+                this.age = age;
+                this.gpa = gpa
+            }
+            print(){
+                console.log(`${this.name}  ${this.age}  ${this.gpa}`)
+            }
+
+        }
+
+        const Student1 = new Student("bhawneet",21,8.2)
+        Student1.print()
+
+
+        // static keyword- belongs to the class not to the object
+        class cars{
+            static number = 0;
+            constructor(name){
+                this.name=name
+                cars.number +=1
+            }
+            static print(){
+                console.log("you")
+            }
+        }
+        
+        const cars1 = new cars()
+        const cars2 = new cars()
+        console.log(cars.number)
+        cars.print()
     </script>
 </body>
 </html>
