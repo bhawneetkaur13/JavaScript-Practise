@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Keyword</title>
+</head>
+<body>
+    <script>
+        // super- refers to the parent class
+        // used to invoke the constructor of parent class
+        // helps to achieve code reusibility
+        // if the child classes have the same constructor then we would invoke the constructor of the parent class
+
+        class Animal{
+            constructor(name,age){
+                this.name=name
+                this.age=age
+            }
+        }
+        class rabbit extends Animal{
+            constructor(name,age,runSpeed){
+                super(name,age)
+                this.runSpeed = runSpeed
+            }
+        }
+        const Rabbit = new rabbit("rab",3,40)
+        console.log(Rabbit.name)
+        console.log(Rabbit.age)
+        console.log(Rabbit.runSpeed)
+    </script>
+</body>
+</html>
