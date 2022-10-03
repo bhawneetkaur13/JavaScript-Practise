@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getters And Setters</title>
+</head>
+<body>
+    <!-- get- binds an object property to a function when that property is accessed -->
+    <script>
+        class Car{
+            constructor(power){
+                this._power=power
+                this._gas = 25
+            }
+            get power(){
+                return `${this._power}hp`;
+            }
+            get gas(){
+                return `${this._gas}L (${this._gas / 50 * 100}%) `
+            }
+
+            // set - binds an object property to a function when the property is asigned a value
+            set gas(value){
+                if (value>50){
+                    value = 50
+                }
+                else if (value <0){
+                    value = 0
+                }
+                this._gas = value
+            }
+        
+        }
+        const car = new Car(400)
+        console.log(car.power)
+        car.gas = 35
+        console.log(car.gas)
+
+        
+      
+    </script>
+</body>
+</html>
