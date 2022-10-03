@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Of Objects</title>
+</head>
+<body>
+    <!-- passing an object as an argument
+    when you invoke a function just pass the name of the object as an argument -->
+    <script>
+        class Car{
+            constructor(name,year,color){
+                this.name=name
+                this.year=year
+                this.color=color
+            }
+            drive(){
+                console.log(`you drive a ${this.name}`)
+            }
+        }
+        const car1 = new Car("mustang",2022,"blue")
+        const car2 = new Car("corvette",2023,"black")
+        const car3 = new Car("ertiga",2021,"white")
+        displayInfo(car2)
+        function displayInfo(car){
+            console.log(car.name)
+            console.log(car.year)
+            console.log(car.color)
+        }
+
+        // array of objects- to access properties of an object that's within an array
+        const cars = [car1,car2,car3]
+        console.log(cars[0].name)
+        console.log(cars[1].name)
+        console.log(cars[2].name)
+        car1.drive()
+        function disp(){
+            for(const car of cars){
+                car.drive()
+            }
+        }
+        disp(cars)
+
+        // anonymous objects - objects without a name. they are not directly referenced.
+        // less syntax. no need for a aunique name
+        class cards{
+            constructor(value,suit){
+                this.value=value
+                this.suit=suit
+            }
+        }
+        const card = [ new cards("A", "Hearts"),
+                        new cards("2", "Hearts"),
+                        new cards("3", "Hearts"),
+                        new cards("4", "Hearts"),
+                       
+                    ]
+        console.log(`${card[1].value}  ${card[0].suit}`)
+
+        // error handling- object with a description that something went wrong. encountering an error will halt the execution of the program 
+        // reasons for errors- cant open a file
+                                // loose a connection
+                                // user types incorrect input
+                                // TypeError- we mistype something
+
+        // if the error is happening while the program is running we would like to gracefully handle these errors
+        try{
+            console.lag("hi")
+        }
+        catch(error){
+            console.log(error)
+        }
+        
+        // sometimes things will go wrong but it will not throw an error then we will use the throw keyword
+        // throw- executes a user defined error
+        try{
+            let x = window.prompt("enter a number")
+            x=Number(x)
+            if(isNaN(x)) throw "not a number"
+            if(x == "") throw "empty"
+            console.log(`${x} is a number`)
+        }
+        catch(error){
+            console.log(error)
+        }
+        finally{
+            console.log("this will execute")
+        }
+
+        // finally - will execute even when the code isnt running
+        
+    </script>
+</body>
+</html>
