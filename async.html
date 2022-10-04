@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async and await</title>
+</head>
+<body>
+    <script>
+         //async - makes a function return a promise
+         async function loadFile(){
+            let loaded = true
+            if(loaded){
+                return "file loaded"
+            }
+            else{
+                throw "file not loaded"
+            }
+        }
+        loadFile().then(value=>console.log(value)).catch(error=>console.log(error))
+
+
+        //await - makes an async function wait for a promise
+        //can be used only inside an async function
+        //helpful when we have to wait for more than one async function
+        async function file(){
+            let load = false
+            if(load){
+                return "file loaded"
+            }
+            else{
+                throw "file not loaded"
+            }
+        }
+        async function start(){
+            try{
+                let message = await file()
+                console.log(message)
+            }
+            catch(error){
+                console.log(error)
+
+            }
+            
+        }
+        start()
+
+    </script>
+</body>
+</html>
