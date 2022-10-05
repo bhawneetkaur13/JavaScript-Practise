@@ -1,0 +1,11 @@
+#inner{
+    background-color: lightgreen;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+}
+#outer{
+    background-color: lightgreen;
+    width: 200px;
+    height: 200px;
+}
